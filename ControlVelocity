@@ -1,0 +1,46 @@
+// Pin assignments
+int motor1PWM = 5;  // PWM pin connected to Talon SRX for Motor 1
+int motor2PWM = 3; // PWM pin connected to Talon SRX for Motor 2
+
+void setup() {
+  Serial.begin(9600);
+  // Set the motor PWM control pins as outputs
+  pinMode(motor1PWM, OUTPUT);
+  pinMode(motor2PWM, OUTPUT);
+}
+
+void loop() {
+  // Motor 1 control
+  // Set Motor 1 speed forward (0-255 for PWM, 127 is neutral)
+  analogWrite(motor1PWM, 0);  // Motor 1 forward with a PWM value of 150
+  
+  // Motor 2 control
+  // Set Motor 2 speed reverse (below 127 is reverse)
+  analogWrite(motor2PWM, 0);  // Motor 2 reverse with a PWM value of 100
+  
+  /*
+  delay(1000);  // Run both motors for 3 seconds
+
+  // Stop both motors
+  analogWrite(motor1PWM, 127);  // Neutral (stop) for Motor 1
+  analogWrite(motor2PWM, 127);  // Neutral (stop) for Motor 2
+  
+  delay(2000);  // Pause for 2 seconds
+
+  // Reverse the motors
+  analogWrite(motor1PWM, 100);  // Motor 1 reverse with a PWM value of 100
+  analogWrite(motor2PWM, 150);  // Motor 2 forward with a PWM value of 150
+  
+  delay(3000);  // Run both motors in reverse for 3 seconds
+
+  // Stop both motors
+  analogWrite(motor1PWM, 127);  // Neutral (stop) for Motor 1
+  analogWrite(motor2PWM, 127);  // Neutral (stop) for Motor 2
+
+  delay(2000);  // Pause for 2 seconds
+
+  Serial.print("Motor value: ");
+  //Serial.print()
+  Serial.println();
+  */
+}
